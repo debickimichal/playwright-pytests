@@ -1,0 +1,137 @@
+{
+  "project": "Playwright Python - Page Object Pattern",
+  "duration_days": 6,
+  "plan": [
+    {
+      "day": 1,
+      "date": "2026-02-19",
+      "title": "Setup i podstawy",
+      "goals": [
+        "Stworzyć czysty projekt Python + venv",
+        "Zainstalować Playwright + pytest",
+        "Skonfigurować VS Code z aktywnym venv",
+        "Utworzyć strukturę projektu Page Object Pattern"
+      ],
+      "tasks": [
+        "Folder projektu palywright_project",
+        "Utworzenie venv i aktywacja w VS Code",
+        "Instalacja zależności: python -m pip install pytest playwright",
+        "python -m playwright install",
+        "Utworzenie folderów pages/ i tests/",
+        "Stworzenie BasePage i przykładowej ExamplePage",
+        "Pierwszy test z Page Object i uruchomienie go"
+      ],
+      "expected_result": "Działający test Page Object Pattern w VS Code"
+    },
+    {
+      "day": 2,
+      "date": "2026-02-20",
+      "title": "Rozszerzenie Page Object",
+      "goals": [
+        "Rozumienie Page Object Pattern",
+        "Dodanie więcej metod i locators",
+        "Refaktoryzacja klas stron"
+      ],
+      "tasks": [
+        "Rozbudowa ExamplePage o więcej akcji (click_more_info, sprawdzanie linków)",
+        "Dodanie klasy LoginPage z polami email i password",
+        "Metoda login(email, password) w LoginPage",
+        "Stworzenie BasePage.wait_for_element() dla stabilności testów",
+        "Pierwszy test logowania w Page Object Pattern"
+      ],
+      "expected_result": "Podstawowa strona logowania z metodą login i test logowania"
+    },
+    {
+      "day": 3,
+      "date": "2026-02-21",
+      "title": "Fixture i stabilność testów",
+      "goals": [
+        "Użycie fixture do zarządzania przeglądarką i sesją",
+        "Czekanie na elementy (expect)",
+        "Wprowadzenie headless mode dla szybszych testów"
+      ],
+      "tasks": [
+        "Refaktoryzacja fixture page() w conftest.py",
+        "Test logowania używa fixture zamiast tworzenia browsera w każdym teście",
+        "Zmiana assert na expect z Playwright",
+        "Testy w headless mode dla CI"
+      ],
+      "expected_result": "Stabilne i czytelne testy z fixture i expect"
+    },
+    {
+      "day": 4,
+      "date": "2026-02-22",
+      "title": "Rozbudowa testów funkcjonalnych",
+      "goals": [
+        "Pokrycie kolejnych scenariuszy testowych",
+        "Testy formularzy, linków, walidacji błędów"
+      ],
+      "tasks": [
+        "Dodanie nowych stron np. DashboardPage, SignupPage",
+        "Dodanie testów: poprawne logowanie, niepoprawne logowanie, weryfikacja elementów po logowaniu",
+        "Refaktoryzacja testów do Page Object Pattern",
+        "Dodanie screenshotów dla testów nieudanych"
+      ],
+      "expected_result": "Pokrycie podstawowych scenariuszy funkcjonalnych i odporne testy"
+    },
+    {
+      "day": 5,
+      "date": "2026-02-23",
+      "title": "Testy zaawansowane i raporty",
+      "goals": [
+        "Wideo i screenshoty z testów",
+        "Generowanie raportów testowych",
+        "Testy parametrów / data-driven testing"
+      ],
+      "tasks": [
+        "Dodanie pytest-html do raportów i uruchamianie testów z raportem",
+        "Dodanie nagrywania wideo z Playwright",
+        "Testy parametrów z różnymi danymi logowania",
+        "Refaktoryzacja Page Object do współpracy z fixture w całym projekcie"
+      ],
+      "expected_result": "Profesjonalne testy z raportem i nagraniami oraz pokrycie edge case’ów"
+    },
+    {
+      "day": 6,
+      "date": "2026-02-24",
+      "title": "CI / integracja i utrzymanie",
+      "goals": [
+        "Integracja z CI/CD (GitHub Actions, Azure DevOps)",
+        "Uruchamianie testów automatycznie przy commitach",
+        "Dokumentacja projektu i dobrych praktyk"
+      ],
+      "tasks": [
+        "Konfiguracja GitHub Actions do uruchamiania testów",
+        "Uruchamianie testów w headless mode w CI",
+        "Tworzenie instrukcji uruchamiania testów i dodawanie komentarzy w Page Object",
+        "Dodanie nowych testów regresyjnych i rozszerzanie projektu"
+      ],
+      "expected_result": "Projekt gotowy do dalszego rozwijania, automatyczne testy przy każdym commit’cie"
+    },
+    {
+      "day": 7,
+      "date": "2026-02-24",
+      "title": "Bonus",
+      "goals": [
+        "testy równoległe (-n auto)",
+        "markery @smoke / @regression",
+        "env variables (.env)",
+        "stabilizacja flaky testów"
+      ],
+      "tasks": [
+        "testy równoległe (-n auto)",
+        "markery @smoke / @regression",
+        "env variables (.env)",
+        "stabilizacja flaky testów"
+      ],
+      "expected_result": "Bonus"
+    }
+  ],
+  "notes": [
+    "Codziennie rób commit i push do repozytorium",
+    "Rozbudowuj Page Object, nie testy – testy mają być krótkie i czytelne",
+    "Wprowadź fixturey dla danych testowych i logowania, aby testy były niezależne"
+  ]
+}
+
+
